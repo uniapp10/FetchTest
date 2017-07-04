@@ -14,6 +14,5 @@
 @interface SendToRN : RCTEventEmitter<RCTBridgeModule>
 
 - (void)refreshWithDict:(NSDictionary *)dict;
-- (void)calendarEventReminderReceived:(NSString *)str;
 
 @end

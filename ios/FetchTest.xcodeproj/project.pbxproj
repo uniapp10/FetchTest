@@ -49,6 +49,7 @@
 		538DEE2B1F050EC100676E4F /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 538DEE151F050EC100676E4F /* UIScrollView+MJExtension.m */; };
 		538DEE2C1F050EC100676E4F /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 538DEE171F050EC100676E4F /* UIScrollView+MJRefresh.m */; };
 		538DEE2D1F050EC100676E4F /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 538DEE191F050EC100676E4F /* UIView+MJExtension.m */; };
+		53EBACDB1F0B62D20087EC7B /* ZDSecondTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EBACDA1F0B62D20087EC7B /* ZDSecondTableController.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -308,6 +309,8 @@
 		538DEE171F050EC100676E4F /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		538DEE181F050EC100676E4F /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		538DEE191F050EC100676E4F /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		53EBACD91F0B62D20087EC7B /* ZDSecondTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSecondTableController.h; sourceTree = "<group>"; };
+		53EBACDA1F0B62D20087EC7B /* ZDSecondTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDSecondTableController.m; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				538DED661F04D06B00676E4F /* SendToRN.m */,
 				538DED621F04A6D500676E4F /* ZDHomeTableController.h */,
 				538DED631F04A6D500676E4F /* ZDHomeTableController.m */,
+				53EBACD91F0B62D20087EC7B /* ZDSecondTableController.h */,
+				53EBACDA1F0B62D20087EC7B /* ZDSecondTableController.m */,
 				536883D31F03A9A8007569E3 /* detail.txt */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -1039,6 +1044,7 @@
 				538DEE2C1F050EC100676E4F /* UIScrollView+MJRefresh.m in Sources */,
 				538DEE221F050EC100676E4F /* MJRefreshBackGifFooter.m in Sources */,
 				538DEE1E1F050EC100676E4F /* MJRefreshHeader.m in Sources */,
+				53EBACDB1F0B62D20087EC7B /* ZDSecondTableController.m in Sources */,
 				538DEE261F050EC100676E4F /* MJRefreshNormalHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,7 @@
 #import "SendToRN.h"
 #define ScreenSize [UIScreen mainScreen].bounds.size
 
-@interface ZDHomeTableController ()<RCTRootViewDelegate, RCTBridgeDelegate>
+@interface ZDHomeTableController ()<RCTRootViewDelegate>
 
 @property (nonatomic, strong) RCTRootView *rootView;
 
@@ -30,8 +30,7 @@
 }
 
 - (void)loadData{
-  [[SendToRN new] refreshWithDict:@{@"value" : @"tableView will refresh"}];
-//  [[[SendToRN alloc] init] calendarEventReminderReceived:@"aa"];
+  [[SendToRN allocWithZone:nil] refreshWithDict:@{@"value":@"refresh"}];
   [self.tableView.mj_header endRefreshing];
 }
 

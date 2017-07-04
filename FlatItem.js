@@ -15,7 +15,8 @@ import {ScreenWidth, ScreenHeight} from './ScreenUnit';
 export default class FlatItem extends Component {
 
     click = () => {
-        // let
+        let Navigate = NativeModules.Navigate;
+        Navigate.push(this.props.item);
     }
 
     dealIncreasePoint = (item) => {

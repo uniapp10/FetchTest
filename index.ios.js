@@ -7,37 +7,38 @@ import {
     View,
     Dimensions,
     FlatList,
-
+    NativeModules,
+    NativeEventEmitter,
+    Alert,
 } from 'react-native';
-// import { NativeModules } from 'react-native';
 
-import {FlatItem} from './FlatItem';
-
-import { NativeEventEmitter, NativeModules } from 'react-native';
+import FlatItem from './FlatItem';
 
 export default class FetchTest extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data:[]
+            data: []
         }
+
+        const { SendToRN } = NativeModules;
+
+        const SendToRNEmitter = new NativeEventEmitter(SendToRN);
+
+        const subscription = SendToRNEmitter.addListener(
+            'RefreshEvent',
+            (dict) => {
+                alert(dict.value);
+            }
+        );
     }
-    // componentWillMount() {
-    //     // const { CalendarManager } = NativeModules;
-    //     //
-    //     // const calendarManagerEmitter = new NativeEventEmitter(CalendarManager);
-    //     //
-    //     // const subscription = calendarManagerEmitter.addListener(
-    //     //     'EventReminder',
-    //     //     (reminder) => console.log(reminder.name)
-    //     // );
-    // }
   componentDidMount() {
-      // this.loadData();
-      // this.timer = setInterval(() => {
-      //     // console.log("aaaaaa");
-      //     this.loadData();
-      // }, 2000);
+      this.loadData();
+      this.timer = setInterval(() => {
+          // console.log("aaaaaa");
+          this.loadData();
+      }, 2000);
+
   }
 
     componentWillUnmount() {
@@ -52,9 +53,9 @@ export default class FetchTest extends Component {
   }
 
   loadData = () => {
-      // this.setState({
-      //     data:[]
-      // });
+      this.setState({
+          data:[]
+      });
       var LoadHttp = NativeModules.LoadHttp;
       LoadHttp.loadData((response) => {
           // console.log("****" + response);
@@ -88,7 +89,6 @@ export default class FetchTest extends Component {
     );
   }
 }
- // <Button title={"loadData"} style={{marginTop:10, height: 50}} onPress={this.loadData}/>
 class SeparatorComponent extends Component {
     render() {
         return (

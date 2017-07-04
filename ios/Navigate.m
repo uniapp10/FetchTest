@@ -8,17 +8,23 @@
 
 #import "Navigate.h"
 #import <UIKit/UIKit.h>
+#import "ZDSecondTableController.h"
 
 @implementation Navigate
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(push:(NSDictionary *)dict){
-  NSLog(@"%@", dict);
   
+  NSLog(@"%@", dict);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    ZDSecondTableController *secTC = [ZDSecondTableController new];
+    secTC.dict = dict;
+    [[self getNavigation] pushViewController:secTC animated:true];
+  });
 }
 
 - (UINavigationController *)getNavigation{
-  UINavigationController *nav = [UIApplication sharedApplication].keyWindow.rootViewController;
+  UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
   return nav;
 }
 @end
